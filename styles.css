@@ -1,0 +1,299 @@
+
+/* Cositas varias */
+*{
+    user-select: none;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+/* header y lo que tenga adentro */
+header{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent;
+    /* color: #fff; */
+}
+header button{
+    display: none;
+}
+header>img{
+    width: 50px;
+    height: 50px;
+}
+header>nav>ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.875rem;
+}
+header a{
+    text-decoration: none;
+    color: #000;
+}
+/* animacion de las a */
+nav a{
+    position: relative;
+    color: #fff;
+}
+nav a::after{
+    content: "";
+    height: 0.125rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: .6s;
+}   
+nav a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+ul{
+    list-style: none;
+}
+
+
+/* Seccion de bienvenida */
+.sect_bienv{
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height:44.3125rem;
+    background-image: linear-gradient(rgba(137, 43, 226, 0.37), rgba(255, 0, 0, 0.329)), url(pexels-andrea-piacquadio-920381.jpg);
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sect_bienv>h2{
+    font-size: 3.125rem;
+    color: #fff;
+    text-align: center;
+}
+.sect_bienv>.wave_1{
+    background-image: url(icon/wave1.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height:18.75rem ;
+    position: absolute;
+    bottom: 0;
+}
+
+
+
+/* Animacion del header*/
+.sticky{
+    transition: .3s; 
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    background-color: white;
+    background-image: linear-gradient(to left, rgba(137, 43, 226), rgba(255, 0, 0, 0.288) );
+
+}
+.sticky>a{
+    transition: .3s;   
+    /* color: var(--morado_oscuro); */
+
+}
+.translate{
+    
+    transition: none;
+    transform: translateY(-48px);
+}
+
+
+/* creando animacion para el separador */
+@keyframes gradient{
+    0%{background-position:0% 75% ;}
+    50%{background-position:100% 50% ;}
+    100%{background-position:0% 70% ;}
+}
+
+
+/* @media para elcambio de wave a separador */
+@media (min-width:1500px ) {
+    .sect_bienv>.wave_1{
+        display: none;
+    }
+    .separador{
+        position:absolute;
+        bottom: 0;
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        background-image: linear-gradient(to right,rgba(137, 43, 226, 0.37), rgba(255, 0, 0, 0.329));
+    }
+    
+}
+
+
+/* Seccion 2 */
+.section_2{
+    padding: 30px;
+    margin: 40px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(1fr,2);
+    grid-template-rows: repeat(1fr,2);
+    grid-template-areas: 
+    "area1 area2"
+    "area1 area3"
+    ;
+}
+.sec2_img{
+    margin: auto;
+    width: 90%;
+    grid-area: area1;
+}
+.sec2_el1{
+    grid-area: area2;
+}
+.sec2_el2{
+    grid-area: area3;
+}
+.sect2_divtit{
+    display: flex;
+    gap:10px;
+    margin: 30px 0px;
+}
+.number{
+    width: 10px;
+    height: 10px;
+    margin: auto 0px;
+    border-radius: 50%;
+    background-color:  rgb(81, 0, 156);
+}
+
+
+
+/* seccion 3 */
+.section_3{
+    background-color: #d4d4d4a4;
+    display: flex;
+    flex-direction: column;
+    padding:6.25rem 3.75rem;
+    /* margin: 50px; */
+    align-items: center;
+}
+.section_3>h3{
+    font-size: 2.1875rem;
+    font-weight: 700;
+    margin: 1.25rem;
+    background-image: linear-gradient(to right ,#892be25e, #ff000080);
+    /* background: linear-gradient(to right,#049293,#0f426e); */
+    -webkit-background-clip: text;
+    background-size: 200% auto;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 2s linear infinite;
+}
+.contenido_dev{
+    display: flex;
+} 
+.sec3_container{
+    margin: 20px;
+    background-color: purple;
+    border-radius: 1rem;
+    display: flex;
+    height: 300px;
+    padding: 30px;
+    color: white;
+    box-shadow: .0625rem .0625rem .625rem black;
+}
+.sec3_container>img{
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    border-radius:50% ;
+    box-shadow: .0625rem .0625rem .625rem black;
+}
+.dev_desc{
+    margin: auto ;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 60%;
+
+}
+.buttons_devs{
+    display: flex;
+    /* justify-content: space-between; */
+    border: #fff solid 2px;
+    padding: 20px 10px;
+    border-radius: 30px;
+}
+.cont_but{
+    text-decoration:none;
+    color: white;
+    font-size:19px;
+    width: fit-content;
+    margin: 10px 0;
+    /* border: white solid 2px; */
+    /* border-radius: 30px; */
+    /* padding: 20px ; */
+}
+.buttons_devs>div{
+    margin-right: 30px ;
+}
+.sub_contact{
+    margin-bottom: 10px;
+}
+.Dev_numero{
+    user-select: text;
+}
+
+/* Seccion de servicios */
+.sec4_serv{
+    display: flex;
+    flex-direction: column;
+}
+.serv_bot{
+    display: flex;
+    flex-direction: column;
+}
+.serv_bot>ul{
+    width: 40%;
+    margin: 3.125rem auto;
+    display: flex;
+    justify-content: space-between;
+}
+.serv_bot>ul>li>button{
+    background-color: white;
+    border: solid black 2px;
+    padding: 5px;
+    border-radius: 30px;
+}
+.serv_bot>ul>li>button:hover{
+    background-color: purple;
+    color: white;
+    font-weight:600 ;
+    transition:.3s;
+    border: solid black 2px;
+    border-radius: 30px;
+    padding: 5px;
+}
+.separador_2{
+    width: 60%;
+    height: 3px;
+    background-color: black;
+    margin: auto;
+}
+.serv_Reinstalación{
+    width: 80%;
+    height: 500px;
+}
+.sec4_serv>h3{
+    margin: 30px auto;
+}
+
