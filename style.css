@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+/* Header */
+.sticky{
+    transition: .3s; 
+    position: sticky;
+    top: 0;
+    /* padding: 10px; */
+    background-color: white;
+    background-image: linear-gradient(to left, rgba(137, 43, 226), rgba(255, 0, 0, 0.288) );
+
+}
+.sticky>a{
+    transition: .3s;   
+    /* color: var(--morado_oscuro); */
+
+}
+.hamburger{
+    display: none;
+}
+
+
+header{
+    z-index: 450;
+    background-color: transparent;
+    width: 100%;
+    height: 50px;  
+    display: flex;
+    justify-content: space-between;
+    
+}
+header *{
+    margin:  auto 0px;
+}
+ul{
+    padding: auto;
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+header ul a{
+    font-size: 13px;
+    text-decoration: none;
+    margin-right: 20px;
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+header img{
+    margin-left: 20px;
+    height: 40px;
+}
+h1{
+    color: white;
+}
+.tittle{
+    display: none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    font-size:medium;
+    
+
+}
+.hidden_menu a{
+    position: relative;
+    color: #fff;
+}
+.hidden_menu a::after{
+    content: "";
+    height: 0.125rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: .6s;
+}   
+.hidden_menu a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* PRIMERA SECCION MUJER CON LAPTOP */
+
+.inicio_section{
+    background-image: linear-gradient(rgba(137, 43, 226, 0.37), rgba(255, 0, 0, 0.329)), url(pexels-andrea-piacquadio-920381.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    height: 700px;
+    position: relative;
+    z-index: -2;
+    transform: translateY(-50px);
+}
+.inicio_section h2{
+    margin: auto;
+    color: white;
+    font-size: 50px;
+    /* position: relative; */
+    text-align: center;
+    width: 100%;
+    position:absolute;
+    top: 200px;
+}
+.shown{
+    opacity: 1;
+    transition: 0.5s ease;
+}
+.hidden{
+    opacity: 0;
+    opacity: 0.2s ease;
+}
+
+.wave1{
+    position: absolute;
+    bottom: -3px;
+}
+/* .translate{
+    transition: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -2;
+    height: 600px;
+} */
+
+/* seccion hombre */
+.section_2{
+    position: relative;
+    padding: 30px;
+    margin: 40px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(1fr,2);
+    grid-template-rows: repeat(1fr,2);
+    grid-template-areas: 
+    "area1 area2"
+    "area1 area3"
+    ;
+}
+.sec2_img{
+    margin: auto;
+    width: 90%;
+    grid-area: area1;
+}
+.sec2_el1{
+    grid-area: area2;
+}
+.sec2_el2{
+    grid-area: area3;
+}
+.sect2_divtit{
+    display: flex;
+    gap:10px;
+    margin: 30px 0px;
+}
+.number{
+    width: 10px;
+    height: 10px;
+    margin: auto 0px;
+    border-radius: 50%;
+    background-color:  rgb(81, 0, 156);
+}
+
+
+/* MEDIAQUERY */
+@media (max-width:420px) {
+    /* MEDIAQUERY DEL HEADER */
+    header img{
+        height: auto;
+    }
+    .inicio_section{
+        height: 450px;
+    }
+    .tittle{
+        display: block;
+        margin: 10px;
+    }
+    header ul{
+        padding:50px 0;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.56);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform .3s ease;
+        
+    }
+    header ul li{
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        width: 100%;
+        height: auto;
+    }
+    header ul li a{
+        
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+    .hamburger{
+        border: solid black 2px;
+        background-color: white;
+        border-radius: 50%;
+        align-items: center;
+        z-index: 999;
+        width: 60px;
+        padding: 0;
+        height: 60px;
+        display: block;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        scale: 0.7;
+    }
+    .hamburger *{
+        margin: 0px;
+    }
+    
+    header ul.is-active{
+        transform: translateX(0%);
+
+    }
+
+ 
+}
