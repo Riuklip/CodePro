@@ -37,11 +37,12 @@ header{
 header *{
     margin:  auto 0px;
 }
-ul{
+header ul{
     padding: auto;
     display: flex;
     list-style: none;
     gap: 15px;
+
 }
 header ul a{
     font-size: 13px;
@@ -67,6 +68,7 @@ h1{
 .hidden_menu a{
     position: relative;
     color: #fff;
+    z-index: 998;
 }
 .hidden_menu a::after{
     content: "";
@@ -136,8 +138,9 @@ h1{
 
 /* seccion hombre */
 .section_2{
-    position: relative;
     padding: 30px;
+    padding-top:60px ;
+    position: relative;
     margin: 40px;
     display: grid;
     gap: 30px;
@@ -170,6 +173,9 @@ h1{
     margin: auto 0px;
     border-radius: 50%;
     background-color:  rgb(81, 0, 156);
+}
+.desactiva_scroll{
+    overflow: hidden;
 }
 
 
