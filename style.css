@@ -180,7 +180,7 @@ h1{
 
 
 /* MEDIAQUERY */
-@media (max-width:420px) {
+@media (max-width:721px) {
     /* MEDIAQUERY DEL HEADER */
     header img{
         height: auto;
