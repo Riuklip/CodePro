@@ -1,130 +1,135 @@
-*{
-    margin: 0;
-    font-family: sans-serif;
-    box-sizing: border-box;
-    user-select: none;
+* {
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  user-select: none;
 }
-
+.desactiva_scroll {
+  overflow: hidden;
+}
 /* Header */
-.sticky{
-    transition: .3s; 
-    position: sticky;
-    top: 0;
-    /* padding: 10px; */
-    background-color: white;
-    background-image: linear-gradient(to left, rgba(137, 43, 226), rgba(255, 0, 0, 0.288) );
+.sticky {
+  transition: 0.3s;
+  position: sticky;
+  top: 0;
+  /* padding: 10px; */
+  background-color: white;
+  background-image: linear-gradient(
+    to left,
+    rgba(137, 43, 226),
+    rgba(255, 0, 0, 0.288)
+  );
+}
+.sticky > a {
+  transition: 0.3s;
+  /* color: var(--morado_oscuro); */
+}
+.hamburger {
+  display: none;
+}
 
+header {
+  z-index: 450;
+  background-color: transparent;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
 }
-.sticky>a{
-    transition: .3s;   
-    /* color: var(--morado_oscuro); */
-
+header * {
+  margin: auto 0px;
 }
-.hamburger{
-    display: none;
+header ul {
+  padding: auto;
+  display: flex;
+  list-style: none;
+  gap: 15px;
 }
-
-
-header{
-    z-index: 450;
-    background-color: transparent;
-    width: 100%;
-    height: 50px;  
-    display: flex;
-    justify-content: space-between;
-    
+header ul a {
+  font-size: 13px;
+  text-decoration: none;
+  margin-right: 20px;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-header *{
-    margin:  auto 0px;
+header img {
+  margin-left: 20px;
+  height: 40px;
 }
-header ul{
-    padding: auto;
-    display: flex;
-    list-style: none;
-    gap: 15px;
-
+h1 {
+  color: white;
 }
-header ul a{
-    font-size: 13px;
-    text-decoration: none;
-    margin-right: 20px;
-    color: white;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+.tittle {
+  display: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: medium;
 }
-header img{
-    margin-left: 20px;
-    height: 40px;
+.hidden_menu a {
+  position: relative;
+  color: #fff;
+  z-index: 998;
 }
-h1{
-    color: white;
+.hidden_menu a::after {
+  content: "";
+  height: 0.125rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: 0.6s;
 }
-.tittle{
-    display: none;
-    font-family:Verdana, Geneva, Tahoma, sans-serif ;
-    font-size:medium;
-    
-
-}
-.hidden_menu a{
-    position: relative;
-    color: #fff;
-    z-index: 998;
-}
-.hidden_menu a::after{
-    content: "";
-    height: 0.125rem;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-color: white;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: .6s;
-}   
-.hidden_menu a:hover::after{
-    transform: scaleX(1);
-    transform-origin: bottom left;
+.hidden_menu a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 /* PRIMERA SECCION MUJER CON LAPTOP */
 
-.inicio_section{
-    background-image: linear-gradient(rgba(137, 43, 226, 0.37), rgba(255, 0, 0, 0.329)), url(pexels-andrea-piacquadio-920381.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    height: 700px;
-    position: relative;
-    z-index: -2;
-    transform: translateY(-50px);
+.inicio_section {
+  background-image: linear-gradient(
+      rgba(137, 43, 226, 0.37),
+      rgba(255, 0, 0, 0.329)
+    ),
+    url(pexels-andrea-piacquadio-920381.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  height: 700px;
+  position: relative;
+  z-index: -2;
+  transform: translateY(-50px);
 }
-.inicio_section h2{
-    margin: auto;
-    color: white;
-    font-size: 50px;
-    /* position: relative; */
-    text-align: center;
-    width: 100%;
-    position:absolute;
-    top: 200px;
+.inicio_section h2 {
+  margin: auto;
+  color: white;
+  font-size: 50px;
+  /* position: relative; */
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 200px;
 }
-.shown{
-    opacity: 1;
-    transition: 0.5s ease;
+.shown {
+  opacity: 1;
+  transition: 0.5s ease;
 }
-.hidden{
-    opacity: 0;
-    opacity: 0.2s ease;
+.hidden {
+  opacity: 0;
+  opacity: 0.2s ease;
 }
 
-.wave1{
-    position: absolute;
-    bottom: -3px;
+.wave1 {
+  position: absolute;
+  bottom: -3px;
+  left: -3px;
+  width: 101%;
 }
 /* .translate{
     transition: none;
@@ -137,112 +142,188 @@ h1{
 } */
 
 /* seccion hombre */
-.section_2{
-    padding: 30px;
-    padding-top:60px ;
-    position: relative;
-    margin: 40px;
-    display: grid;
-    gap: 30px;
-    grid-template-columns: repeat(1fr,2);
-    grid-template-rows: repeat(1fr,2);
-    grid-template-areas: 
-    "area1 area2"
-    "area1 area3"
-    ;
+.container_gen_2 {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.sec2_img{
-    margin: auto;
-    width: 90%;
-    grid-area: area1;
+.container_2 {
+  display: flex;
+  margin: 60px 60px;
 }
-.sec2_el1{
-    grid-area: area2;
+.container_2 > img {
+  width: 40%;
 }
-.sec2_el2{
-    grid-area: area3;
+.container_txt {
+  gap: 30px;
+  width: 60%;
+  font-size: large;
+  margin: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.sect2_divtit{
-    display: flex;
-    gap:10px;
-    margin: 30px 0px;
+.container_txt > h2 {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    rgba(137, 43, 226, 0.37),
+    rgba(255, 0, 0, 0.329)
+  );
+  background-size: 200%;
+  background-repeat: no-repeat;
+  animation: 5s gradient linear infinite;
 }
-.number{
-    width: 10px;
-    height: 10px;
-    margin: auto 0px;
-    border-radius: 50%;
-    background-color:  rgb(81, 0, 156);
+@keyframes gradient {
+  0% {
+    background-position: 0% 25%;
+  }
+  25% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 0% 75%;
+  }
+  75% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 0% 25%;
+  }
 }
-.desactiva_scroll{
-    overflow: hidden;
+.puntos {
+  list-style: none;
 }
-
 
 /* MEDIAQUERY */
-@media (max-width:721px) {
-    /* MEDIAQUERY DEL HEADER */
-    header img{
-        height: auto;
-    }
-    .inicio_section{
-        height: 450px;
-    }
-    .tittle{
-        display: block;
-        margin: 10px;
-    }
-    header ul{
-        padding:50px 0;
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.56);
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        transform: translateX(100%);
-        transition: transform .3s ease;
-        
-    }
-    header ul li{
-        display: flex;
-        justify-content: center;
-        margin: auto;
-        width: 100%;
-        height: auto;
-    }
-    header ul li a{
-        
-        display: flex;
-        justify-content: center;
-        margin: auto;
-    }
-    .hamburger{
-        border: solid black 2px;
-        background-color: white;
-        border-radius: 50%;
-        align-items: center;
-        z-index: 999;
-        width: 60px;
-        padding: 0;
-        height: 60px;
-        display: block;
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        scale: 0.7;
-    }
-    .hamburger *{
-        margin: 0px;
-    }
+@media (max-width: 721px) {
+  /* MEDIAQUERY DEL HEADER */
+
+  
+  header img {
+    height: auto;
+  }
+  .inicio_section {
+    height: 450px;
+  }
+  .tittle {
+    display: block;
+    margin: 10px;
+  }
+  header ul {
+    padding: 50px 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.56);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+  header ul li {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    height: auto;
+  }
+  header ul li a {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+  .hamburger {
+    border: solid black 2px;
+    background-color: white;
+    border-radius: 50%;
+    align-items: center;
+    z-index: 999;
+    width: 60px;
+    padding: 0;
+    height: 60px;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    scale: 0.7;
+  }
+  .hamburger * {
+    margin: 0px;
+  }
+
+  header ul.is-active {
+    transform: translateX(0%);
+  }
+
+  /* SECCION 2 DEL HOMBRE EN L BURO Y DEMAS */
+    .section_2 {
+    padding: 30px 0px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-x: hidden;
+
     
-    header ul.is-active{
-        transform: translateX(0%);
+  }  
 
-    }
+   .container_gen_2 {
+    overflow: hidden;
+    margin: 0px auto;
+    display: flex;
+    width: 300%;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+  }
+  
 
- 
+  .container_2 {
+    opacity: 0;
+    width: calc(100% / 3);
+    margin: 30px 0px 30px 30px;
+    gap: 30px;
+    transition: .5s;
+  }
+  .container_txt p{
+    max-width:160px ;
+  }
+  .puntos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 10px;
+  }
+  .punto {
+    transition: .5s;
+    user-select: all;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 13px;
+    border: 1px rgba(0, 0, 0, 0.212) solid;
+    height: 13px;
+    -webkit-box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.11);
+    box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.11);
+    box-shadow: 2px 2px 2px black 2px;
+  }
+  .container_txt {
+    margin: 0px;
+    font-size: 8px;
+    font-weight: bolder;
+  }
+  .container_2.active {
+    opacity: 1;
+  }
+  .punto.active {
+    background-color: gray;
+  }
 }

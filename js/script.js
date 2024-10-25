@@ -1,8 +1,13 @@
 import hamburgerMenu from "./hamburger.js";
 import alternarjs from "./alternar.js";
+import carrusel from "./desplazar_carrusel.js";
+import accion_puntos  from "./acciones_puntos.js";
+
 const d=document;
+
 d.addEventListener("click",(e)=>{
     hamburgerMenu(e,".hidden_menu",".menu_button");
+    accion_puntos(e,".punto",".container_gen_2");
 })
 window.addEventListener("scroll", function(){
 
@@ -19,8 +24,9 @@ window.addEventListener("scroll", function(){
 d.addEventListener("DOMContentLoaded",()=>{
 alternarjs("#h2_1","#h2_2");
 
-
-
+setTimeout(() => {
+    carrusel(1);
+}, 5000);
 })
 
 
