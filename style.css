@@ -196,6 +196,72 @@ h1 {
 .puntos {
   list-style: none;
 }
+    /* SECCION DE PRESENTACION DE LOS SERVICIIOS */
+    .servicios_gen{
+      padding: 40px;
+
+    }
+    .serv_reins{
+      -webkit-box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.11);
+    box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.11);
+    box-shadow: 2px 2px 2px black 2px;
+      margin: 30px;
+      border: rgba(0, 0, 0, 0.103) solid .5px;
+      border-radius: 20px;
+      padding: 30px;
+      display: flex;
+      gap: 30px;
+    }
+    .reinst{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 20px;
+      -webkit-box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.11);
+      -moz-box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.11);
+      box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.11);
+      box-shadow: 2px 2px 2px black 2px;
+      padding:20px ;
+      border-radius: 30px;
+    }
+    .prog_adj{
+      display: flex;
+      justify-content: space-between;
+      width: 400px;
+      margin: auto ; 
+    }
+    .reins_img{
+      width: 100px;
+    }
+    .cont_img_reins{
+      margin: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      -webkit-box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.11);
+    box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.11);
+    box-shadow: 2px 2px 2px black 2px;
+    padding:20px ;
+    border-radius: 30px;
+    }
+    .cont_img_reins *{
+      margin: auto;
+    }
+    .servicios_gen  h2 {
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: linear-gradient(
+        rgba(137, 43, 226, 0.37),
+        rgba(255, 0, 0, 0.329)
+      );
+      background-size: 200%;
+      background-repeat: no-repeat;
+      animation: 5s gradient linear infinite;
+    }
+
 
 /* MEDIAQUERY */
 @media (max-width: 721px) {
@@ -263,7 +329,7 @@ h1 {
 
   /* SECCION 2 DEL HOMBRE EN L BURO Y DEMAS PARA TABLET */
     .section_2 {
-    padding: 30px 0px;
+    padding: 40px 0px;
     width: 100%;
     align-items: center;
     display: flex;
@@ -322,7 +388,7 @@ h1 {
   }
   .container_txt p{
     max-width:90% ;
-    text-align: justify;
+    /* text-align: justify; */
   }
   .container_txt h2{
     font-size: 17px;
@@ -356,15 +422,18 @@ h1 {
         font-size: 15px;
         font-weight: bolder;
       }
-      .container_txt p{
-        /* width: ; */
-        text-align: justify;
-      }
+      /* .container_txt p{
+         width: ; 
+         text-align: justify;
+       }  */
       .container_txt h2{
         font-size: 17px;
         /* max-width: 360px; */
         /* width: 90%; */
       }
 
+      /* SECCION DE PRESENTACION DE LOS SERVICIIOS */
 
+      .serv_reins{}
+      .reinst{}
 }
