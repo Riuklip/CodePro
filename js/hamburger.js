@@ -1,7 +1,8 @@
 export default function hamburgerMenu(e,menu,boton){
     const d=document;    
-   
+    const $navel=d.querySelectorAll(".nav_elem")
     
+    var pulsado=e.target.classList;
     if(e.target.matches(boton) || e.target.matches(".menu_button *")){
         d.querySelector(menu).classList.toggle("is-active");
         d.querySelector(boton).classList.toggle("is-active");
@@ -25,6 +26,18 @@ export default function hamburgerMenu(e,menu,boton){
             d.body.classList.remove("desactiva_scroll");
           
         }
+        console.log(pulsado)
+       
+            
+            if (pulsado.contains("nav_elem")) {
+                d.querySelector(menu).classList.remove("is-active");
+                d.querySelector(boton).classList.remove("is-active");
+                d.body.classList.remove("desactiva_scroll");
+            }
+
+      
+
+
     }
 
 
